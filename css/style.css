@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    
+    background-image: url(../img/wall.jpg); 
+}
+
+h1 {
+    color: #fff;
+}
+
+p{
+    color: #fff;
+}
+
+
+/* Big circles */
+.bigCircle{
+    position: fixed;
+    border-radius: 50%;
+    border: 5px solid  rgb(78, 221, 231);
+}
+
+.bigCircle1{
+    height: 200vh;
+    width: 100vw;    
+    opacity: 0.4;    
+    border: 5px solid  rgb(78, 221, 231);
+}
+
+.bigCircle2{
+    height: 160vh;
+    width: 80vw;  
+    opacity: 0.2;    
+    border: 5px solid  rgb(78, 221, 231);
+}
+
+
+/* Title and text container*/
+.container{
+    /* background-color:rgba(31, 138, 209, 0.2); */
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+}
+
+/* Circles */
+.circle{
+    height: 25rem;
+    width: 25rem;
+   /* border-radius: 50%; */
+   /* background-color: rgb(0, 255, 179);*/
+   background-image: url(../img/tech.png);
+   background-size: contain;
+    opacity: 0.6;
+    transition: ease-out 0.2s;
+    position: relative;
+    perspective: 1000px;
+
+    z-index: 100;
+}
+
+.circleTL {    
+    top: 0;
+    left: 0;
+    margin-left: -140px;
+    margin-top: -120px;
+    justify-content: flex-start;
+    position: fixed;
+    transform: rotateX(-350deg) rotateY(333deg);
+    
+}
+
+.circleTR {    
+    top: 0;
+    right: 0;
+    margin-right: -140px;
+    margin-top: -120px;
+    justify-content: flex-start;
+    position: fixed;
+    transform: rotateX(350deg) rotateY(333deg);
+}
+
+.circleBL {    
+    bottom: 0;
+    left: 0;
+    margin-left: -140px;
+    margin-bottom: -120px;
+    justify-content: flex-start;
+    position: fixed;
+    transform: rotateX(-350deg) rotateY(-333deg);
+}
+
+.circleBR {    
+    bottom: 0;
+    right: 0;
+    margin-right: -140px;
+    margin-bottom: -120px;
+    justify-content: flex-end;
+    position: fixed;
+    transform: rotateX(350deg) rotateY(-333deg);
+    
+}
+
+
+/* Perspective squares containers*/
+.squareLR {    
+    height: 100vh;
+    width: 100vh;    
+    
+    perspective: 50px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+    
+    z-index: 99;
+}
+
+.squareTB {    
+    height: 100vh;
+    width: 100vh;    
+
+    perspective: 8px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+   
+    z-index: 99;
+}
+
+/* Perspective squares */
+.square{
+    opacity: 0.1;
+    position: fixed;
+    background-color: rgb(56, 149, 202);
+}
+
+.squareL {
+    height: 90vh;
+    width: 30vh;
+    left: 0;
+    margin-top: 40px;
+    margin-left: -320px;   
+    
+    /* box-shadow: 0 0 15px 10px  rgb(78, 221, 231); */
+    
+    transform: rotateX(360deg) rotateY(-344deg);    
+}
+
+.squareR {
+    width: 14vw;
+    height: 90vh;
+    right: 0;
+    margin-top: 40px;
+    margin-right: -20vw;   
+        
+    /* box-shadow: 0 0 15px 10px  rgb(78, 221, 231); */
+    
+    transform: rotateX(360deg) rotateY(344deg);
+}
+
+.squareT {
+    width: 60vw;
+    height: 15vh;    
+    margin-top: 24px;    
+        
+    /* box-shadow: 0px 5px 15px 4px  rgb(78, 221, 231); */
+    
+    transform: rotateX(185deg) rotateY(-360deg);
+}
+
+.squareB {
+    height: 15vh;
+    width: 60vw;
+    bottom: 0;
+    margin-bottom: 2vh;    
+         
+    /* box-shadow: 0px -5px 15px 4px  rgb(78, 221, 231); */
+    
+    transform: rotateX(-185deg) rotateY(-360deg);
+}
